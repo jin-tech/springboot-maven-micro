@@ -8,10 +8,10 @@ FROM openjdk:8-jdk
 WORKDIR /app
 
 # Copy the WAR file into the container
-COPY target/springboot-maven-micro.war /app/springboot-maven-micro.war
+COPY target/springboot-maven-course-micro-svc-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port on which the application will run
 EXPOSE 8080
 
 # Define the command to run the application
-ENTRYPOINT ["java", "-jar", "/app/springboot-maven-micro.war"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
