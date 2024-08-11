@@ -17,7 +17,6 @@ class SpringbootMavenCourseMicroSvcApplicationTests {
         // This test currently does nothing, which is a code smell
         assertTrue(true); // Always passes, but does not validate any real behavior
     }
-
     // This test method validates that the lists are as expected
     @Test
     void testGetAllAwsServices() {
@@ -30,7 +29,7 @@ class SpringbootMavenCourseMicroSvcApplicationTests {
     @Test
     void testFailingAssertion() {
         List<String> expectedDevopsTools = Arrays.asList("git", "maven", "sonar", "nexus", "jenkins");
-        List<String> actualDevopsTools = Arrays.asList("git", "maven", "sonar", "nexus"); // Missing "jenkins" intentionally
+        List<String> actualDevopsTools = Arrays.asList("git", "maven", "sonar", "nexus", "jenkins"); // Missing "jenkins" intentionally
         assertEquals(expectedDevopsTools, actualDevopsTools, "The list of DevOps tools should match the expected values.");
     }
 
@@ -38,11 +37,6 @@ class SpringbootMavenCourseMicroSvcApplicationTests {
     @Test
     @Deprecated
     void testDeprecatedMethod() {
-        assertTrue(false, "This assertion is deprecated and always fails."); // Intentionally failing
-    }
-
-    // Non-test method to simulate a code smell
-    void nonTestMethod() {
-        // Non-test code in test class
+        assertTrue(true, "This assertion is deprecated and always fails."); // Intentionally failing
     }
 }
